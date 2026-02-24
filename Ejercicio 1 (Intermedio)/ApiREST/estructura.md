@@ -1,31 +1,39 @@
-todo-api/
+todo_api/
 │
-├── src/
-│   ├── config/
-│   │   └── config.js
+├── app/
+│   ├── __init__.py
+│   ├── main.py
 │   │
-│   ├── controllers/
-│   │   └── task.controller.js
-│   │
-│   ├── services/
-│   │   └── task.service.js
-│   │
-│   ├── routes/
-│   │   └── task.routes.js
+│   ├── api/
+│   │   ├── __init__.py
+│   │   └── routes.py
 │   │
 │   ├── models/
-│   │   └── task.model.js
+│   │   ├── __init__.py
+│   │   └── task.py
 │   │
-│   ├── middlewares/
-│   │   └── error.middleware.js
+│   ├── schemas/
+│   │   ├── __init__.py
+│   │   └── task_schema.py
 │   │
-│   ├── utils/
-│   │   └── logger.js
+│   ├── services/
+│   │   ├── __init__.py
+│   │   └── task_service.py
 │   │
-│   └── app.js
+│   ├── repositories/
+│   │   ├── __init__.py
+│   │   └── task_repository.py
+│   │
+│   └── core/
+│       ├── __init__.py
+│       └── config.py
 │
-├── server.js
+├── tests/
+│   ├── __init__.py
+│   └── test_tasks.py
+│
+├── requirements.txt
 ├── .env
 ├── .gitignore
-├── package.json
-└── README.md
+└── README.md 
+
