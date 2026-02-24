@@ -1,5 +1,14 @@
 def calcular_descuento(precio, porcentaje, tipo_cliente):
-    # 🔎 Validación inmediata
+    """
+    Calcula el precio final aplicando descuento.
+    
+    :param precio: Precio original (>=0)
+    :param porcentaje: Descuento base entre 0 y 100
+    :param tipo_cliente: 'premium' o 'regular'
+    :return: Precio final redondeado a 2 decimales
+    """
+
+    # 🔎 Validación inmediato
     if precio < 0:
         raise ValueError("El precio no puede ser negativo.")
     
@@ -16,9 +25,14 @@ def calcular_descuento(precio, porcentaje, tipo_cliente):
     
     return round(precio_final, 2) 
 
-try:
-    resultado = calcular_descuento(-50, 10, 'premium')
-    print(resultado)
-except ValueError as e:
-    print("Se produjo un error:", e)
+if __name__ == "__main__":
+    try:
+        resultado = calcular_descuento(-50, 10, 'premium')
+        print(resultado)
+
+        if not isinstance(precio, (int, float)):
+            raise TypeError("El precio debe ser numérico.")
+
+    except ValueError as e:
+        print("Se produjo un error:", e)
 
