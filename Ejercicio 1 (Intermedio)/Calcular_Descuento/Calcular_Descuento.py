@@ -8,7 +8,11 @@ def calcular_descuento(precio, porcentaje, tipo_cliente):
     :return: Precio final redondeado a 2 decimales
     """
 
-    # 🔎 Validación inmediato
+    # 🔎 Validación inmediato 
+
+    if not isinstance(precio, (int, float)):
+            raise TypeError("El precio debe ser numérico.")
+    
     if precio < 0:
         raise ValueError("El precio no puede ser negativo.")
     
@@ -27,11 +31,8 @@ def calcular_descuento(precio, porcentaje, tipo_cliente):
 
 if __name__ == "__main__":
     try:
-        resultado = calcular_descuento(-50, 10, 'premium')
+        resultado = calcular_descuento(50, 10, 'premium')
         print(resultado)
-
-        if not isinstance(precio, (int, float)):
-            raise TypeError("El precio debe ser numérico.")
 
     except ValueError as e:
         print("Se produjo un error:", e)
