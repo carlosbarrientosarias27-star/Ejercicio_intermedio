@@ -1,4 +1,3 @@
-'''text
 todo_api/
 │
 ├── app/
@@ -37,4 +36,4 @@ todo_api/
 ├── .env
 ├── .gitignore
 └── README.md 
-'''
+
